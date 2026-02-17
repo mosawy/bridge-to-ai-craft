@@ -3,22 +3,22 @@ import { Calendar, ArrowRight, Flame } from "lucide-react";
 
 const posts = [
   {
-    date: "Month 3",
-    title: "Building My First RAG Pipeline with LangChain",
-    excerpt: "How I connected ERPNext data to a retrieval-augmented generation system for intelligent querying.",
-    tag: "AI / RAG",
+    date: "Recent",
+    title: "Building Ask AI: Natural Language Interface for ERPNext",
+    excerpt: "How I built an AI-powered app that lets non-technical users query ERP data using natural language.",
+    tag: "AI / ERP",
   },
   {
-    date: "Month 2",
-    title: "Setting Up Local LLM Training on Ubuntu + NVIDIA",
-    excerpt: "A deep dive into configuring CUDA, PyTorch, and fine-tuning workflows on my local workstation.",
-    tag: "Infrastructure",
+    date: "2024",
+    title: "Developing SFA-Mobix: Salesperson Journey Management",
+    excerpt: "Building a mobile-first Frappe app for managing field sales activities and customer visits.",
+    tag: "Development",
   },
   {
-    date: "Month 1",
-    title: "Why I'm Pivoting from ERP to Data Science",
-    excerpt: "The strategic reasoning behind leveraging enterprise data experience in the AI space.",
-    tag: "Career",
+    date: "2023",
+    title: "Getting Started with Frappe Framework",
+    excerpt: "My journey learning the Frappe framework and building enterprise ERP solutions.",
+    tag: "Learning",
   },
 ];
 

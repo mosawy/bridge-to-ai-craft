@@ -4,18 +4,18 @@ import { GraduationCap, Users, BookOpen, MessageSquare } from "lucide-react";
 const highlights = [
   {
     icon: Users,
-    title: "University Teaching Assistant",
-    text: "Mentoring undergraduate students in computer science, bridging theory with real-world full-stack development.",
+    title: "Teaching Assistant at Cairo University",
+    text: "Teaching programming courses at Faculty of Science, Cairo University since 2024. Mentoring undergraduate students in computer science.",
   },
   {
     icon: BookOpen,
-    title: "Curriculum Design",
-    text: "Designing lab sessions and practical exercises that connect academic concepts to industry tools like Git, Docker, and APIs.",
+    title: "B.Sc. Computer Science",
+    text: "Graduated from Faculty of Science, Cairo University (2017-2021). Strong foundation in computer science fundamentals and software development.",
   },
   {
     icon: MessageSquare,
     title: "Teaching Philosophy",
-    text: "\"If you can't explain it simply, you don't understand it well enough.\" — Complex ideas deserve clear communication.",
+    text: "Bridging theory with real-world full-stack development. Connecting academic concepts to industry tools and best practices.",
   },
 ];
 

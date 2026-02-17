@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Terminal } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, MapPin, Terminal } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -10,6 +10,17 @@ const Footer = () => {
             <span>Built with React + Tailwind · 2026</span>
           </div>
 
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <MapPin className="h-4 w-4 text-primary" />
+              <span>Haram, Giza, Egypt</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Phone className="h-4 w-4 text-primary" />
+              <span>01090003178</span>
+            </div>
+          </div>
+
           <div className="flex items-center gap-6">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Github className="h-5 w-5" />
@@ -17,7 +28,7 @@ const Footer = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="mailto:hello@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="mailto:mohamed.elsawy739@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
               <Mail className="h-5 w-5" />
             </a>
           </div>

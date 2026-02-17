@@ -1,30 +1,38 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Server, Smartphone, Brain } from "lucide-react";
+import { ExternalLink, Brain, Smartphone, Server, Truck } from "lucide-react";
 
 const projects = [
   {
-    icon: Server,
-    category: "ERP Customization",
-    title: "ERPNext Payment Gateway Integration",
+    icon: Brain,
+    category: "AI Integration",
+    title: "Ask AI – Natural Language Interface for ERPNext",
     description:
-      "Built custom Fawry and Paymob payment integrations for ERPNext, enabling seamless payment processing for Egyptian businesses.",
-    tags: ["Python", "Frappe", "ERPNext", "Fawry", "Paymob"],
+      "AI-powered app enabling non-technical users to query ERP data using natural language. Generates dynamic charts and tables with context-aware conversations.",
+    tags: ["Python", "Frappe", "JavaScript", "AI", "ERPNext"],
   },
   {
     icon: Smartphone,
-    category: "Mobile Development",
-    title: "React Native Field Service App",
+    category: "Mobile ERP",
+    title: "SFA-Mobix – Salesperson Journey Management",
     description:
-      "Cross-platform mobile app for field service teams, syncing with ERPNext backend for real-time work order management.",
-    tags: ["React Native", "Node.js", "MongoDB", "REST API"],
+      "Frappe app managing salesperson field activities including journey planning, customer visits, sales orders, invoices, and payments from mobile devices.",
+    tags: ["Python", "Frappe", "Mobile", "ERPNext", "SQL"],
   },
   {
-    icon: Brain,
-    category: "AI / RAG Experiment",
-    title: "ERP Knowledge Base RAG System",
+    icon: Server,
+    category: "Automation",
+    title: "Production Cost Recalculation",
     description:
-      "Retrieval-Augmented Generation pipeline that transforms ERPNext documentation and business data into AI-queryable knowledge.",
-    tags: ["Python", "LangChain", "NVIDIA", "LLM", "Vector DB"],
+      "Automated Frappe app for monthly production cost re-evaluation. Improved accuracy in financial reporting and inventory valuation.",
+    tags: ["Python", "Frappe", "Manufacturing", "Finance"],
+  },
+  {
+    icon: Truck,
+    category: "Logistics",
+    title: "Purchase Shipment Tracking",
+    description:
+      "App monitoring shipment status and supplier reliability. Tracks partial deliveries, quantity variances, and supports multiple delivery routes.",
+    tags: ["Python", "Frappe", "Logistics", "Reporting"],
   },
 ];
 
@@ -49,7 +57,7 @@ const ProjectsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Teaching", href: "#teaching" },
-  { label: "Open Source", href: "#opensource" },
+  { label: "Experience", href: "#opensource" },
   { label: "Blog", href: "#blog" },
   { label: "Uses", href: "#uses" },
 ];
@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         <a href="#" className="flex items-center gap-2 font-mono text-sm font-semibold tracking-wider text-primary">
           <Terminal className="h-5 w-5" />
-          <span>~/portfolio</span>
+          <span>~/mohamed-elsawy</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">

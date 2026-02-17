@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Monitor, Cpu, HardDrive, Terminal } from "lucide-react";
+import { Monitor, Cpu, Database, Terminal } from "lucide-react";
 
 const tools = [
-  { icon: Monitor, label: "Ubuntu 25.04", detail: "Daily driver OS — bleeding edge" },
-  { icon: Cpu, label: "NVIDIA GPU", detail: "Local AI training & inference" },
-  { icon: HardDrive, label: "High-Spec Workstation", detail: "Built for LLM fine-tuning" },
-  { icon: Terminal, label: "Neovim + tmux", detail: "Terminal-first workflow" },
+  { icon: Terminal, label: "Python & JavaScript", detail: "Primary programming languages" },
+  { icon: Database, label: "SQL & Databases", detail: "Data modeling and queries" },
+  { icon: Monitor, label: "Frappe Framework", detail: "ERP development platform" },
+  { icon: Cpu, label: "ERPNext", detail: "Enterprise resource planning" },
 ];
 
 const UsesSection = () => {

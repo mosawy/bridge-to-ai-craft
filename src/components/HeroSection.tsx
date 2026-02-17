@@ -22,26 +22,27 @@ const HeroSection = () => {
           {/* Terminal-style label */}
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 font-mono text-xs text-muted-foreground mb-8">
             <span className="h-2 w-2 rounded-full bg-primary animate-glow-pulse" />
-            Full-Stack Developer · Teaching Assistant · AI Explorer
+            Software Engineer · Teaching Assistant · ERP Specialist
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-6">
-            From{" "}
+            Mohamed{" "}
             <span className="gradient-text inline-flex items-center gap-3">
-              Enterprise Systems
+              Elsawy
               <Braces className="h-10 w-10 md:h-14 md:w-14 text-primary" />
             </span>
             <br />
-            to{" "}
+            Building{" "}
             <span className="gradient-text inline-flex items-center gap-3">
-              Artificial Intelligence
+              Intelligent ERPs
               <Brain className="h-10 w-10 md:h-14 md:w-14 text-primary" />
             </span>
           </h1>
 
           <p className="mx-auto max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
-            I build enterprise ERP solutions and harness that data to fuel AI insights.
-            Currently deep-diving into RAG systems and LLM fine-tuning on local NVIDIA hardware.
+            Results-driven Software Engineer with 2+ years developing Frappe-based ERP solutions.
+            Skilled in Python, JavaScript, and SQL. Teaching programming at Cairo University.
+            Passionate about innovation, mentorship, and continuous learning.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -1,16 +1,20 @@
 import { motion } from "framer-motion";
-import { GitBranch, Star, GitPullRequest, Code2 } from "lucide-react";
+import { Building2, Calendar, Code2 } from "lucide-react";
 
-const contributions = [
+const experience = [
   {
-    repo: "frappe/education",
-    description: "Active contributor to Frappe Education — building features that serve thousands of academic institutions worldwide.",
-    stats: { prs: 12, stars: "1.2k" },
+    company: "Golive-Solutions",
+    location: "Cairo, Egypt",
+    role: "Software Engineer",
+    period: "2023 - Present",
+    description: "Developing Frappe-based ERP solutions for clients. Building custom apps, integrations, and automation workflows.",
   },
   {
-    repo: "frappe/erpnext",
-    description: "Bug fixes and enhancements to the core ERPNext framework, focusing on payment and accounting modules.",
-    stats: { prs: 5, stars: "18k" },
+    company: "Cairo University - Faculty of Science",
+    location: "Cairo, Egypt",
+    role: "Teaching Assistant",
+    period: "2024 - Present",
+    description: "Teaching programming courses and mentoring undergraduate students in computer science.",
   },
 ];
 
@@ -25,59 +29,67 @@ const OpenSourceSection = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="font-mono text-xs text-primary tracking-widest uppercase">
-            // The Contributor
+            // Experience
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
-            Open Source
+            Work Experience
           </h2>
           <p className="text-muted-foreground max-w-xl mb-14">
-            Contributing to large-scale open source projects shows I can navigate complex codebases and collaborate globally.
+            Building enterprise ERP solutions and shaping the next generation of developers.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {contributions.map((item, i) => (
+          {experience.map((item, i) => (
             <motion.div
-              key={item.repo}
+              key={item.company}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="rounded-xl border border-border bg-card p-8 card-hover"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <Code2 className="h-5 w-5 text-primary" />
-                <span className="font-mono text-sm text-primary font-semibold">{item.repo}</span>
+              <div className="flex items-center gap-3 mb-2">
+                <Building2 className="h-5 w-5 text-primary" />
+                <span className="font-mono text-sm text-primary font-semibold">{item.company}</span>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+              <div className="flex items-center gap-4 mb-4 text-xs text-muted-foreground">
+                <span>{item.location}</span>
+                <div className="flex items-center gap-1">
+                  <Calendar className="h-3 w-3" />
+                  <span>{item.period}</span>
+                </div>
+              </div>
+              <h3 className="font-display text-lg font-semibold mb-2">{item.role}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
-              <div className="flex items-center gap-6 font-mono text-xs text-muted-foreground">
-                <div className="flex items-center gap-1.5">
-                  <GitPullRequest className="h-3.5 w-3.5 text-primary" />
-                  <span>{item.stats.prs} PRs merged</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <Star className="h-3.5 w-3.5 text-primary" />
-                  <span>{item.stats.stars} stars</span>
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* CTA */}
+        {/* Skills */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-10 flex items-center gap-3"
+          className="mt-10"
         >
-          <GitBranch className="h-4 w-4 text-muted-foreground" />
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-4">
-            View all contributions on GitHub →
-          </a>
+          <div className="flex items-center gap-2 mb-4">
+            <Code2 className="h-4 w-4 text-primary" />
+            <span className="font-mono text-sm text-muted-foreground">Core Skills</span>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {["Python", "JavaScript", "SQL", "Git", "Frappe", "ERPNext"].map((skill) => (
+              <span
+                key={skill}
+                className="rounded-md bg-primary/10 px-3 py-1.5 font-mono text-xs text-primary font-medium"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
