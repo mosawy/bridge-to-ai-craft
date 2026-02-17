@@ -56,7 +56,7 @@ const HeroSection = () => {
               href="#opensource"
               className="rounded-lg border border-border bg-surface px-8 py-3 font-display font-semibold text-foreground transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10"
             >
-              Open Source
+              Work Experience
             </a>
           </div>
         </motion.div>
