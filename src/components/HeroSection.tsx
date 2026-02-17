@@ -1,6 +1,73 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Braces, Brain } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import { useMemo } from "react";
+
+const codeSnippets = [
+  "def train(model):",
+  "SELECT * FROM",
+  "import torch",
+  "useState()",
+  "async await",
+  "git commit -m",
+  "npm install",
+  "docker build",
+  "class ERPNext:",
+  "fn main() {",
+  "pip install",
+  "sudo apt get",
+  "curl -X POST",
+  "export default",
+  "CREATE TABLE",
+  "JOIN ON",
+];
+
+const FloatingSnippets = () => {
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 14 }, (_, i) => ({
+        id: i,
+        text: codeSnippets[i % codeSnippets.length],
+        x: `${5 + (i * 7) % 90}%`,
+        y: `${5 + (i * 11) % 85}%`,
+        duration: 18 + (i % 5) * 4,
+        delay: i * 1.2,
+        fontSize: 10 + (i % 3) * 2,
+        opacity: 0.06 + (i % 4) * 0.02,
+      })),
+    []
+  );
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {particles.map((p) => (
+        <motion.span
+          key={p.id}
+          className="absolute font-mono text-primary whitespace-nowrap select-none"
+          style={{
+            left: p.x,
+            top: p.y,
+            fontSize: p.fontSize,
+            opacity: 0,
+          }}
+          animate={{
+            opacity: [0, p.opacity, p.opacity, 0],
+            y: [0, -60, -120, -180],
+            x: [0, (p.id % 2 === 0 ? 20 : -20), 0],
+          }}
+          transition={{
+            duration: p.duration,
+            repeat: Infinity,
+            delay: p.delay,
+            ease: "linear",
+          }}
+        >
+          {p.text}
+        </motion.span>
+      ))}
+    </div>
+  );
+};
 
 const HeroSection = () => {
   return (
@@ -12,6 +79,7 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 bg-grid opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+      <FloatingSnippets />
 
       <div className="relative z-10 container mx-auto px-6 text-center">
         <motion.div
